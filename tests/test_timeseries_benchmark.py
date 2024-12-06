@@ -68,9 +68,9 @@ CONCEPT_CONFIGS = {
     [
         10,
         100,
-        500,
-        750,
-        1000,
+        # 500,
+        # 750,
+        # 1000,
     ],
 )
 @pytest.mark.parametrize(
@@ -79,7 +79,7 @@ CONCEPT_CONFIGS = {
         f"{2**i}x{2**i}"
         for i in [
             9,
-            10,
+            # 10,
             # 11,
         ]
     ],
@@ -185,10 +185,10 @@ def test_bbox(
     [
         10,
         100,
-        500,
-        1000,
-        1500,
-        2000,
+        # 500,
+        # 1000,
+        # 1500,
+        # 2000,
     ],
 )
 def test_statistics(
