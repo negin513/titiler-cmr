@@ -1,7 +1,13 @@
-!#/bin/bash
+# These scripts are meant to help determine which datasets will and will not work with titiler-cmr
 
-# datasets that work
-# going through https://search.earthdata.nasa.gov/search?q=C2532426483-ORNL_CLOUD&ff=Available%20in%20Earthdata%20Cloud&fl=3%2B-%2BGridded%2BObservations!4%2B-%2BGridded%2BModel%2BOutput&gdf=NetCDF&lat=38.81570252135013&long=-281.8125&zoom=0
+## Initial conditions
+
+[This Earthdata search query approximates these parameters](https://search.earthdata.nasa.gov/search?ff=Available%20in%20Earthdata%20Cloud&fl=3%2B-%2BGridded%2BObservations!4%2B-%2BGridded%2BModel%2BOutput&gdf=Cloud%2BOptimized%2BGeoTIFF%2B%2528COG%2529!NetCDF!HDF)
+
+* ✅ Available in Earthdata cloud
+* Data format is Cloud-Optimized GeoTIFF, HDF5 or NetCDF-4 (actually will HDF5 work?)
+    * In Earthdata Search, ticked Cloud-Optimized GeoTIFF, GeoTIFF, HDF, NetCDF
+* Level 3 and Level 4 data products
 
 # micasa dataset
 python titiler_cmr_params_builder.py --collection-id C3273639213-GES_DISC
