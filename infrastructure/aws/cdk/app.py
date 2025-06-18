@@ -12,12 +12,13 @@ from aws_cdk import aws_logs as logs
 from aws_cdk import aws_sns as sns
 from aws_cdk import aws_sns_subscriptions as subscriptions
 from aws_cdk.aws_apigatewayv2_integrations import HttpLambdaIntegration
-from config import StackSettings, AppSettings
+from config import AppSettings, StackSettings
 from constructs import Construct
 
 stack_settings, app_settings = StackSettings(), AppSettings()
 
 DEFAULT_ENV = {
+    "AWS_REQUEST_PAYER": "requester",
     "GDAL_CACHEMAX": "200",  # 200 mb
     "GDAL_DISABLE_READDIR_ON_OPEN": "EMPTY_DIR",
     "GDAL_INGESTED_BYTES_AT_OPEN": "32768",  # get more bytes when opening the files.
